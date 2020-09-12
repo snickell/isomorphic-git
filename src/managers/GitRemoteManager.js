@@ -3,6 +3,7 @@ import { UrlParseError } from '../errors/UrlParseError.js'
 import { translateSSHtoHTTP } from '../utils/translateSSHtoHTTP.js'
 
 import { GitRemoteHTTP } from './GitRemoteHTTP'
+import { GitRemoteIPFS } from './GitRemoteIPFS'
 
 function parseRemoteUrl({ url }) {
   // the stupid "shorter scp-like syntax"
@@ -47,6 +48,7 @@ export class GitRemoteManager {
     const remoteHelpers = new Map()
     remoteHelpers.set('http', GitRemoteHTTP)
     remoteHelpers.set('https', GitRemoteHTTP)
+    remoteHelpers.set('ipfs', GitRemoteIPFS)
 
     const parts = parseRemoteUrl({ url })
     if (!parts) {
