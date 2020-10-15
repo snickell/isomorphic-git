@@ -48,10 +48,12 @@ async function copyFixtureIntoIpfsTempDir(ipfs, basedir, fixture) {
 async function makeIPFS(fixture) {
   const { getFixturePath } = require('jest-fixtures')
 
-  const FS = require('isomorphic-git-ipfs')
+  // const FS = require('isomorphic-git-ipfs')
+  const FS = require('../../../../isomorphic-git-ipfs/ipfs-fs.js')
   const _fs = new FS()
+  const ipfs = await _fs.init()
+  
   const fs = new FileSystem(_fs)
-  const ipfs = await _fs.ipfs
 
   const testsDir = path.resolve(__dirname, '..')
 
