@@ -42,6 +42,7 @@ async function copyFixtureIntoIpfsTempDir(ipfs, basedir, fixture) {
       parents: true,
     })
   }
+  return dir
 }
 
 async function makeIPFS(fixture) {
