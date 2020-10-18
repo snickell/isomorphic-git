@@ -26,7 +26,7 @@ import { join } from '../utils/join.js'
  *   fs,
  *   dir: '/tutorial',
  *   depth: 5,
- *   ref: 'master'
+ *   ref: 'main'
  * })
  * console.log(commits)
  *
@@ -46,6 +46,7 @@ export async function log({
 
     return await _log({
       fs: new FileSystem(fs),
+      cache: {},
       gitdir,
       ref,
       depth,

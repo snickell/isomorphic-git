@@ -77,6 +77,7 @@ export async function _pull({
 
     const { fetchHead, fetchHeadDescription } = await _fetch({
       fs,
+      cache,
       http,
       onProgress,
       onMessage,
@@ -95,6 +96,7 @@ export async function _pull({
     // Merge the remote tracking branch into the local one.
     await _merge({
       fs,
+      cache,
       gitdir,
       ours: ref,
       theirs: fetchHead,

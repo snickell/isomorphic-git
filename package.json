@@ -7,7 +7,7 @@
   "module": "./index.js",
   "unpkg": "./index.umd.min.js",
   "bin": {
-    "isogit": "./cli.js"
+    "isogit": "./cli.cjs"
   },
   "sideEffects": false,
   "engines": {
@@ -40,7 +40,7 @@
   },
   "homepage": "https://isomorphic-git.org/",
   "files": [
-    "cli.js",
+    "cli.cjs",
     "browser-tests.json",
     "http/*",
     "index.cjs",
@@ -71,8 +71,8 @@
     "@babel/plugin-transform-async-to-generator": "7.5.0",
     "@babel/preset-env": "7.5.5",
     "@babel/runtime": "7.5.5",
-    "@isomorphic-git/cors-proxy": "2.6.1",
-    "@isomorphic-git/lightning-fs": "^3.4.2",
+    "@isomorphic-git/cors-proxy": "2.7.0",
+    "@isomorphic-git/lightning-fs": "^3.3.0",
     "@isomorphic-git/pgp-plugin": "0.0.7",
     "@semantic-release/exec": "3.3.6",
     "@types/jest": "24.0.18",
@@ -82,7 +82,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "8.0.6",
     "browserfs": "2.0.0",
-    "bundlewatch": "0.2.5",
+    "bundlewatch": "0.2.7",
     "cross-env": "6.0.0",
     "decompress": "^4.2.1",
     "diff-lines": "1.1.1",
@@ -97,7 +97,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "git-http-mock-server": "1.2.1",
+    "git-http-mock-server": "2.0.0",
     "github-comment": "1.0.1",
     "graceful-fs": "^4.2.4",
     "inquirer": "^7.3.3",
@@ -144,7 +144,12 @@
         "path": "./index.umd.min.js",
         "maxSize": "100kb"
       }
-    ]
+    ],
+    "ci": {
+      "trackBranches": [
+        "main"
+      ]
+    }
   },
   "collective": {
     "type": "opencollective",

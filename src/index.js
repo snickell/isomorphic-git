@@ -25,6 +25,7 @@ import { findRoot } from './api/findRoot.js'
 import { getConfig } from './api/getConfig.js'
 import { getConfigAll } from './api/getConfigAll.js'
 import { getRemoteInfo } from './api/getRemoteInfo.js'
+import { getRemoteInfo2 } from './api/getRemoteInfo2.js'
 import { hashBlob } from './api/hashBlob.js'
 import { indexPack } from './api/indexPack.js'
 import { init } from './api/init.js'
@@ -33,6 +34,7 @@ import { listBranches } from './api/listBranches.js'
 import { listFiles } from './api/listFiles.js'
 import { listNotes } from './api/listNotes.js'
 import { listRemotes } from './api/listRemotes.js'
+import { listServerRefs } from './api/listServerRefs.js'
 import { listTags } from './api/listTags.js'
 import { log } from './api/log.js'
 import { merge } from './api/merge.js'
@@ -47,6 +49,7 @@ import { readTag } from './api/readTag.js'
 import { readTree } from './api/readTree.js'
 import { remove } from './api/remove.js'
 import { removeNote } from './api/removeNote.js'
+import { renameBranch } from './api/renameBranch.js'
 import { resetIndex } from './api/resetIndex.js'
 import { resolveRef } from './api/resolveRef.js'
 import { setConfig } from './api/setConfig.js'
@@ -92,6 +95,7 @@ export {
   findMergeBase,
   findRoot,
   getRemoteInfo,
+  getRemoteInfo2,
   hashBlob,
   indexPack,
   init,
@@ -100,6 +104,7 @@ export {
   listFiles,
   listNotes,
   listRemotes,
+  listServerRefs,
   listTags,
   log,
   merge,
@@ -114,6 +119,7 @@ export {
   readTree,
   remove,
   removeNote,
+  renameBranch,
   resetIndex,
   resolveRef,
   status,
@@ -158,6 +164,7 @@ export default {
   findMergeBase,
   findRoot,
   getRemoteInfo,
+  getRemoteInfo2,
   hashBlob,
   indexPack,
   init,
@@ -166,6 +173,7 @@ export default {
   listFiles,
   listNotes,
   listRemotes,
+  listServerRefs,
   listTags,
   log,
   merge,
@@ -180,6 +188,7 @@ export default {
   readTree,
   remove,
   removeNote,
+  renameBranch,
   resetIndex,
   resolveRef,
   status,

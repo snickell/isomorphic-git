@@ -11,21 +11,15 @@ import { compareAge } from '../utils/compareAge.js'
  *
  * @param {object} args
  * @param {import('../models/FileSystem.js').FileSystem} args.fs
+ * @param {any} args.cache
  * @param {string} args.gitdir
  * @param {string} args.ref
  * @param {number|void} args.depth
  * @param {Date|void} args.since
  *
- * @returns {Promise<Array<ReadCommitResult>>} Resolves to an array of ReadCommitResult objects
- * @see ReadCommitResult
- * @see CommitObject
- *
- * @example
- * let commits = await git.log({ dir: '$input((/))', depth: $input((5)), ref: '$input((master))' })
- * console.log(commits)
- *
+ * @returns {Promise<Array<ReadCommitResult>>}
  */
-export async function _log({ fs, gitdir, ref, depth, since }) {
+export async function _log({ fs, cache, gitdir, ref, depth, since }) {
   const sinceTimestamp =
     typeof since === 'undefined'
       ? undefined
@@ -35,7 +29,7 @@ export async function _log({ fs, gitdir, ref, depth, since }) {
   const commits = []
   const shallowCommits = await GitShallowManager.read({ fs, gitdir })
   const oid = await GitRefManager.resolve({ fs, gitdir, ref })
-  const tips = [await _readCommit({ fs, gitdir, oid })]
+  const tips = [await _readCommit({ fs, cache, gitdir, oid })]
 
   while (true) {
     const commit = tips.pop()
@@ -58,7 +52,7 @@ export async function _log({ fs, gitdir, ref, depth, since }) {
       // Add the parents of this commit to the queue
       // Note: for the case of a commit with no parents, it will concat an empty array, having no net effect.
       for (const oid of commit.commit.parent) {
-        const commit = await _readCommit({ fs, gitdir, oid })
+        const commit = await _readCommit({ fs, cache, gitdir, oid })
         if (!tips.map(commit => commit.oid).includes(commit.oid)) {
           tips.push(commit)
         }

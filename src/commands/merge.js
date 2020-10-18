@@ -46,11 +46,6 @@ import { mergeTree } from '../utils/mergeTree.js'
  * @param {string} [args.signingKey]
  *
  * @returns {Promise<MergeResult>} Resolves to a description of the merge operation
- * @see MergeResult
- *
- * @example
- * let m = await git.merge({ dir: '$input((/))', ours: '$input((master))', theirs: '$input((remotes/origin/master))' })
- * console.log(m)
  *
  */
 export async function _merge({
@@ -93,6 +88,7 @@ export async function _merge({
   // find most recent common ancestor of ref a and ref b
   const baseOids = await _findMergeBase({
     fs,
+    cache,
     gitdir,
     oids: [ourOid, theirOid],
   })

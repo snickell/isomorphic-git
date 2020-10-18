@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/isomorphic-git/isomorphic-git/master/website/static/img/isomorphic-git-logo.svg?sanitize=true" alt="" height="150"/>
+  <img src="https://raw.githubusercontent.com/isomorphic-git/isomorphic-git/main/website/static/img/isomorphic-git-logo.svg?sanitize=true" alt="" height="150"/>
 </p>
 
 # isomorphic-git
@@ -22,7 +22,7 @@ The following environments are tested in CI and will continue to be supported un
 
 <table width="100%">
 <tr>
-<td align="center"><img src="https://raw.githubusercontent.com/isomorphic-git/isomorphic-git/master/website/static/img/browsers/node.webp" alt="" width="64" height="64"><br> Node 10</td>
+<td align="center"><img src="https://raw.githubusercontent.com/isomorphic-git/isomorphic-git/main/website/static/img/browsers/node.webp" alt="" width="64" height="64"><br> Node 10</td>
 <td align="center"><img src="https://raw.githubusercontent.com/alrra/browser-logos/bc47e4601d2c1fd46a7912f9aed5cdda4afdb301/src/chrome/chrome.svg?sanitize=true" alt="" width="64" height="64"><br> Chrome 79</td>
 <td align="center"><img src="https://raw.githubusercontent.com/alrra/browser-logos/bc47e4601d2c1fd46a7912f9aed5cdda4afdb301/src/edge/edge.svg?sanitize=true" alt="" width="64" height="64"><br> Edge 79</td>
 <td align="center"><img src="https://raw.githubusercontent.com/alrra/browser-logos/bc47e4601d2c1fd46a7912f9aed5cdda4afdb301/src/firefox/firefox.svg?sanitize=true" alt="" width="64" height="64"><br> Firefox 72</td>
@@ -163,6 +163,7 @@ unless there is a major version bump.
 - [getConfig](https://isomorphic-git.github.io/docs/getConfig.html)
 - [getConfigAll](https://isomorphic-git.github.io/docs/getConfigAll.html)
 - [getRemoteInfo](https://isomorphic-git.github.io/docs/getRemoteInfo.html)
+- [getRemoteInfo2](https://isomorphic-git.github.io/docs/getRemoteInfo2.html)
 - [hashBlob](https://isomorphic-git.github.io/docs/hashBlob.html)
 - [indexPack](https://isomorphic-git.github.io/docs/indexPack.html)
 - [init](https://isomorphic-git.github.io/docs/init.html)
@@ -171,6 +172,7 @@ unless there is a major version bump.
 - [listFiles](https://isomorphic-git.github.io/docs/listFiles.html)
 - [listNotes](https://isomorphic-git.github.io/docs/listNotes.html)
 - [listRemotes](https://isomorphic-git.github.io/docs/listRemotes.html)
+- [listServerRefs](https://isomorphic-git.github.io/docs/listServerRefs.html)
 - [listTags](https://isomorphic-git.github.io/docs/listTags.html)
 - [log](https://isomorphic-git.github.io/docs/log.html)
 - [merge](https://isomorphic-git.github.io/docs/merge.html)
@@ -185,6 +187,7 @@ unless there is a major version bump.
 - [readTree](https://isomorphic-git.github.io/docs/readTree.html)
 - [remove](https://isomorphic-git.github.io/docs/remove.html)
 - [removeNote](https://isomorphic-git.github.io/docs/removeNote.html)
+- [renameBranch](https://isomorphic-git.github.io/docs/renameBranch.html)
 - [resetIndex](https://isomorphic-git.github.io/docs/resetIndex.html)
 - [resolveRef](https://isomorphic-git.github.io/docs/resolveRef.html)
 - [setConfig](https://isomorphic-git.github.io/docs/setConfig.html)
@@ -317,6 +320,13 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
     <td align="center"><a href="https://sojin.io"><img src="https://avatars1.githubusercontent.com/u/3102175?v=4" width="60px;" alt="Sojin Park"/><br /><sub><b>Sojin Park</b></sub></a><br /><a href="https://github.com/isomorphic-git/isomorphic-git/commits?author=raon0211" title="Code">💻</a></td>
     <td align="center"><a href="http://eaf4.com"><img src="https://avatars0.githubusercontent.com/u/319282?v=4" width="60px;" alt="Edward Faulkner"/><br /><sub><b>Edward Faulkner</b></sub></a><br /><a href="https://github.com/isomorphic-git/isomorphic-git/commits?author=ef4" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/KSXGitHub"><img src="https://avatars2.githubusercontent.com/u/11488886?v=4" width="60px;" alt="Khải"/><br /><sub><b>Khải</b></sub></a><br /><a href="https://github.com/isomorphic-git/isomorphic-git/issues?q=author%3AKSXGitHub" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://crutchcorn.dev/"><img src="https://avatars0.githubusercontent.com/u/9100169?v=4" width="60px;" alt="Corbin Crutchley"/><br /><sub><b>Corbin Crutchley</b></sub></a><br /><a href="https://github.com/isomorphic-git/isomorphic-git/commits?author=crutchcorn" title="Code">💻</a> <a href="https://github.com/isomorphic-git/isomorphic-git/commits?author=crutchcorn" title="Documentation">📖</a> <a href="https://github.com/isomorphic-git/isomorphic-git/commits?author=crutchcorn" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://onetwo.ren/"><img src="https://avatars1.githubusercontent.com/u/3746270?v=4" width="60px;" alt="lin onetwo"/><br /><sub><b>lin onetwo</b></sub></a><br /><a href="https://github.com/isomorphic-git/isomorphic-git/commits?author=linonetwo" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/linfaxin"><img src="https://avatars2.githubusercontent.com/u/3705017?v=4" width="60px;" alt="林法鑫"/><br /><sub><b>林法鑫</b></sub></a><br /><a href="https://github.com/isomorphic-git/isomorphic-git/issues?q=author%3Alinfaxin" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/willstott101"><img src="https://avatars2.githubusercontent.com/u/335152?v=4" width="60px;" alt="Will Stott"/><br /><sub><b>Will Stott</b></sub></a><br /><a href="https://github.com/isomorphic-git/isomorphic-git/commits?author=willstott101" title="Code">💻</a> <a href="https://github.com/isomorphic-git/isomorphic-git/commits?author=willstott101" title="Tests">⚠️</a></td>
+    <td align="center"><a href="http://mtnspring.org/"><img src="https://avatars2.githubusercontent.com/u/223277?v=4" width="60px;" alt="Seth Nickell"/><br /><sub><b>Seth Nickell</b></sub></a><br /><a href="https://github.com/isomorphic-git/isomorphic-git/issues?q=author%3Asnickell" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
